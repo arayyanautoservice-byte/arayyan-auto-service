@@ -20,7 +20,18 @@
       font-weight: bold;
       letter-spacing: 2px;
     }
+    details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+  }
 
+  details p {
+    margin-top: 10px;
+    color: #94a3b8;
+  }
+
+</style>
     .hero {
       padding: 60px 20px;
       text-align: center;
@@ -97,14 +108,37 @@
 <section class="section">
   <h2>Jasa Kami</h2>
   <div class="services">
-    <div class="card">Tune Up</div>
-    <div class="card">Overhaul</div>
-    <div class="card">Understeel</div>
-    <div class="card">Ganti Aki</div>
-    <div class="card">Service Berkala</div>
-    <div class="card">Diagnosa Scanner</div>
-    <div class="card">Flushing Coolant</div>
-    <div class="card">Scanning Mobilizer</div>
+
+    <details class="card">
+      <summary>Tune Up</summary>
+      <p>Service ringan untuk menjaga performa mesin tetap optimal. Mulai dari Rp150.000</p>
+    </details>
+
+    <details class="card">
+      <summary>Overhaul</summary>
+      <p>Bongkar mesin total untuk perbaikan menyeluruh. Harga menyesuaikan kondisi mesin.</p>
+    </details>
+
+    <details class="card">
+      <summary>Understeel</summary>
+      <p>Perbaikan kaki-kaki mobil agar nyaman dan stabil.</p>
+    </details>
+
+    <details class="card">
+      <summary>Ganti Aki</summary>
+      <p>Tersedia berbagai merk aki dengan pemasangan cepat.</p>
+    </details>
+
+    <details class="card">
+      <summary>Service Berkala</summary>
+      <p>Perawatan rutin sesuai KM mobil.</p>
+    </details>
+
+    <details class="card">
+      <summary>Diagnosa Scanner</summary>
+      <p>Pengecekan kerusakan mobil menggunakan alat scanner modern.</p>
+    </details>
+
   </div>
 </section>
 
