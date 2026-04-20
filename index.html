@@ -1,236 +1,163 @@
 ﻿<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Rayyan Auto Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Rayyan Auto Service</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
 
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+header {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(to right, #0f172a, #1e293b);
-    }
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+.hero h1 {
+  font-size: 40px;
+}
 
-    .hero p {
-      color: #94a3b8;
-    }
+.hero p {
+  color: #94a3b8;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #22c55e;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
 
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-    .services, .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
+.services, .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
 
-    /* CARD + DETAILS */
-    details.card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    details.card:hover {
-      transform: scale(1.05);
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    details summary {
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 16px;
-      list-style: none;
-    }
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
 
-    details summary::-webkit-details-marker {
-      display: none;
-    }
+.popup-content {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+}
 
-    details p {
-      margin-top: 10px;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    a {
-      color: #22c55e;
-    }
-
-  </style>
+footer {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  A RAYYAN AUTO SERVICE
-</header>
+<header>A RAYYAN AUTO SERVICE</header>
 
 <section class="hero">
-  <h1>Solusi Service Mobil Terpercaya</h1>
-  <p>Melayani segala jenis perawatan & perbaikan mobil di Kediri</p>
+<h1>Solusi Service Mobil Terpercaya</h1>
+<p>Melayani segala jenis perawatan mobil di Kediri</p>
 
-  <a href="https://wa.me/6281217340682?text=Halo%20A%20Rayyan%20Auto%20Service,%20saya%20ingin%20service%20mobil" 
-     class="btn" target="_blank">
-     Hubungi Sekarang
-  </a>
-
-  <p style="margin-top:15px;">
-    📞 <a href="tel:+6281217340682">0812-1734-0682</a>
-  </p>
+<a href="https://wa.me/6281217340682" class="btn" target="_blank">
+Hubungi Sekarang
+</a>
 </section>
 
 <section class="section">
-  <h2>Jasa Kami</h2>
-  <div class="services">
+<h2>Jasa Kami</h2>
+<div class="services">
 
-    <details class="card">
-      <summary>🔧 Tune Up</summary>
-      <p>
-        Mulai Rp150.000 <br>
-        ✔ Mesin lebih halus <br>
-        ✔ Irit BBM <br>
-        ✔ Gratis cek ringan
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Tune Up', 'Mulai Rp150.000 - Mesin lebih halus & irit BBM')">Tune Up</div>
 
-    <details class="card">
-      <summary>⚙️ Overhaul</summary>
-      <p>
-        Bongkar mesin total <br>
-        ✔ Perbaikan menyeluruh <br>
-        ✔ Tenaga mesin kembali optimal
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Overhaul', 'Bongkar mesin total & perbaikan menyeluruh')">Overhaul</div>
 
-    <details class="card">
-      <summary>🚗 Understeel</summary>
-      <p>
-        Perbaikan kaki-kaki <br>
-        ✔ Suspensi lebih nyaman <br>
-        ✔ Stabil saat berkendara
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Understeel', 'Perbaikan kaki-kaki mobil agar nyaman')">Understeel</div>
 
-    <details class="card">
-      <summary>🔋 Ganti Aki</summary>
-      <p>
-        ✔ Banyak pilihan merk <br>
-        ✔ Pemasangan cepat <br>
-        ✔ Bisa panggilan
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Ganti Aki', 'Pemasangan cepat + banyak pilihan aki')">Ganti Aki</div>
 
-    <details class="card">
-      <summary>🛠 Service Berkala</summary>
-      <p>
-        ✔ Sesuai KM mobil <br>
-        ✔ Perawatan rutin <br>
-        ✔ Cegah kerusakan besar
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Service Berkala', 'Perawatan rutin sesuai KM mobil')">Service Berkala</div>
 
-    <details class="card">
-      <summary>💻 Diagnosa Scanner</summary>
-      <p>
-        ✔ Deteksi kerusakan cepat <br>
-        ✔ Teknologi modern <br>
-        ✔ Akurat & efisien
-      </p>
-    </details>
+<div class="card" onclick="openPopup('Diagnosa Scanner', 'Cek kerusakan mobil pakai alat modern')">Diagnosa Scanner</div>
 
+</div>
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h3 id="popup-title"></h3>
+    <p id="popup-text"></p>
+    <br>
+    <button onclick="closePopup()">Tutup</button>
   </div>
-</section>
-
-<section class="section">
-  <h2>Produk Kami</h2>
-  <div class="products">
-    <div class="card">Oli Shell Helix</div>
-    <div class="card">Petronas Nexta</div>
-    <div class="card">Titan Oil</div>
-    <div class="card">Filter Oli Original</div>
-    <div class="card">Coolant / Air Radiator</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Kendaraan yang Kami Layani</h2>
-  <p>Honda • Suzuki • Mitsubishi • Isuzu • Daihatsu • Toyota</p>
-</section>
-
-<section class="section">
-  <h2>Kenapa Pilih Kami?</h2>
-  <div class="services">
-    <div class="card">Mekanik Berpengalaman</div>
-    <div class="card">Sparepart Original</div>
-    <div class="card">Harga Terjangkau</div>
-    <div class="card">Pelayanan Cepat</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Lokasi</h2>
-  <p>Kediri dan sekitarnya</p>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Kediri&output=embed" 
-    width="100%" height="250" style="border:0; border-radius:10px; margin-top:20px;">
-  </iframe>
-</section>
+</div>
 
 <footer>
-  © 2026 A Rayyan Auto Service | All Rights Reserved
+© 2026 A Rayyan Auto Service
 </footer>
+
+<script>
+function openPopup(title, text) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-text").innerText = text;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
 
 </body>
 </html>
